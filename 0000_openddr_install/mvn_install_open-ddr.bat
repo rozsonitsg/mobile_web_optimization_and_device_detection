@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=org.openddr.simpleapi.oddr -DartifactId=OpenDDR -Dversion=1.0.0.26 -Dpackaging=jar -Dfile=OpenDDR-Simple-API-1.0.0.26.jar -DgeneratePom=true -DcreateChecksum=true

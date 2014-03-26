@@ -1,0 +1,40 @@
+<c:set var="device" value="${requestScope.currentDevice}"/>
+<p>
+  <table>
+    <thead><tr>Property name<th></th>Property value<th></th></tr></thead>
+    <tr><td>id</td><td>${requestScope.currentDevice.id}</td></tr>
+    <tr><td>vendor</td><td>${requestScope.currentDevice.vendor}</td></tr>
+    <tr><td>model</td><td>${requestScope.currentDevice.model}</td></tr>
+    <tr><td>displayWidth</td><td>${requestScope.currentDevice.displayWidth}</td></tr>
+    <tr><td>displayHeight</td><td>${requestScope.currentDevice.displayHeight}</td></tr>
+    <tr><td>version</td><td>${requestScope.currentDevice.version}</td></tr>
+    <tr><td>inputDevices</td><td>${requestScope.currentDevice.inputDevices}</td></tr>
+    <tr><td>cookieSupport</td><td>${requestScope.currentDevice.cookieSupport}</td></tr>
+    <tr><td>imageFormatSupport</td><td>${requestScope.currentDevice.imageFormatSupport}</td></tr>
+    <tr><td>inputModeSupport</td><td>${requestScope.currentDevice.inputModeSupport}</td></tr>
+    <tr><td>stylesheetSupport</td><td>${requestScope.currentDevice.stylesheetSupport}</td></tr>
+    <tr><td>markupSupport</td><td>${requestScope.currentDevice.markupSupport}</td></tr>
+    <tr><td>scriptSupport</td><td>${requestScope.currentDevice.scriptSupport}</td></tr>
+    <tr><td>mobileBrowser</td><td>${requestScope.currentDevice.mobileBrowser}</td></tr>
+    <tr><td>deviceOs</td><td>${requestScope.currentDevice.deviceOs}</td></tr>
+    <tr><td>nokiaSeries</td><td>${requestScope.currentDevice.nokiaSeries}</td></tr>
+    <tr><td>mobileBrowserVersion</td><td>${requestScope.currentDevice.mobileBrowserVersion}</td></tr>
+    <tr><td>tabletDevice</td><td>${requestScope.currentDevice.tabletDevice}</td></tr>
+    <tr><td>nokiaEdition</td><td>${requestScope.currentDevice.nokiaEdition}</td></tr>
+    <tr><td>deviceOsVersion</td><td>${requestScope.currentDevice.deviceOsVersion}</td></tr>
+    <tr><td>wirelessDevice</td><td>${requestScope.currentDevice.wirelessDevice}</td></tr>
+    <tr><td>marketingName</td><td>${requestScope.currentDevice.marketingName}</td></tr>
+    <tr><td>xhtmlFormatAsAttribute</td><td>${requestScope.currentDevice.xhtmlFormatAsAttribute}</td></tr>
+    <tr><td>xhtmlFormatAsCssProperty</td><td>${requestScope.currentDevice.xhtmlFormatAsCssProperty}</td></tr>
+    <tr><td>ajaxSupportGetElementById</td><td>${requestScope.currentDevice.ajaxSupportGetElementById}</td></tr>
+    <tr><td>ajaxSupportEventListener</td><td>${requestScope.currentDevice.ajaxSupportEventListener}</td></tr>
+    <tr><td>ajaxManipulateDom</td><td>${requestScope.currentDevice.ajaxManipulateDom}</td></tr>
+    <tr><td>ajaxSupportJavascript</td><td>${requestScope.currentDevice.ajaxSupportJavascript}</td></tr>
+    <tr><td>ajaxSupportInnerHtml</td><td>${requestScope.currentDevice.ajaxSupportInnerHtml}</td></tr>
+    <tr><td>ajaxManipulateCss</td><td>${requestScope.currentDevice.ajaxManipulateCss}</td></tr>
+    <tr><td>ajaxSupportEvents</td><td>${requestScope.currentDevice.ajaxSupportEvents}</td></tr>
+    <tr><td>dualOrientation</td><td>${requestScope.currentDevice.dualOrientation}</td></tr>
+    <tr><td>imageInlining</td><td>${requestScope.currentDevice.imageInlining}</td></tr>
+    <tr><td>from</td><td>${requestScope.currentDevice.from}</td></tr>
+  </table>
+</p>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+  <bean class="com.epam.training.smdm.war.spring.oddr.factory.IdentificationServiceFactory">
+    <property name="configurationLocation" value="/oddr.properties"/>
+  </bean>
+  <util:map id="oddrDevicePropertyMappings">
+    <entry key="id" value="id"/>
+    <entry key="vendor" value="vendor"/>
+    <entry key="model" value="model"/>
+    <entry key="displayWidth" value="displayWidth"/>
+    <entry key="displayHeight" value="displayHeight"/>
+    <entry key="version" value="version"/>
+    <entry key="inputDevices" value="inputDevices"/>
+    <entry key="cookieSupport" value="cookieSupport"/>
+    <entry key="imageFormatSupport" value="imageFormatSupport"/>
+    <entry key="inputModeSupport" value="inputModeSupport"/>
+    <entry key="stylesheetSupport" value="stylesheetSupport"/>
+    <entry key="markupSupport" value="markupSupport"/>
+    <entry key="scriptSupport" value="scriptSupport"/>
+    <entry key="mobile_browser" value="mobileBrowser"/>
+    <entry key="device_os" value="deviceOs"/>
+    <entry key="nokia_series" value="nokiaSeries"/>
+    <entry key="mobile_browser_version" value="mobileBrowserVersion"/>
+    <entry key="is_tablet" value="tabletDevice"/>
+    <entry key="nokia_edition" value="nokiaEdition"/>
+    <entry key="device_os_version" value="deviceOsVersion"/>
+    <entry key="is_wireless_device" value="wirelessDevice"/>
+    <entry key="marketing_name" value="marketingName"/>
+    <entry key="xhtml_format_as_attribute" value="xhtmlFormatAsAttribute"/>
+    <entry key="xhtml_format_as_css_property" value="xhtmlFormatAsCssProperty"/>
+    <entry key="ajax_support_getelementbyid" value="ajaxSupportGetElementById"/>
+    <entry key="ajax_support_event_listener" value="ajaxSupportEventListener"/>
+    <entry key="ajax_manipulate_dom" value="ajaxManipulateDom"/>
+    <entry key="ajax_support_javascript" value="ajaxSupportJavascript"/>
+    <entry key="ajax_support_inner_html" value="ajaxSupportInnerHtml"/>
+    <entry key="ajax_manipulate_css" value="ajaxManipulateCss"/>
+    <entry key="ajax_support_events" value="ajaxSupportEvents"/>
+    <entry key="dual_orientation" value="dualOrientation"/>
+    <entry key="image_inlining" value="imageInlining"/>
+    <entry key="from" value="from"/>
+  </util:map>
+</beans>

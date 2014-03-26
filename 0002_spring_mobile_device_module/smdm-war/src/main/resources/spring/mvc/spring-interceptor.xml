@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mvc="http://www.springframework.org/schema/mvc" 
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+  <mvc:interceptors>
+    <!-- On pre-handle, resolve the device that originated the web request -->
+    <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor">
+      <constructor-arg>
+<!--         <bean class="org.springframework.mobile.device.LiteDeviceResolver" /> -->
+        <bean class="com.epam.training.smdm.war.spring.oddr.resolver.ODDRDeviceResolver">
+          <property name="userAgentResolver" ref="oddrUserAgentResolver"/>
+        </bean>
+      </constructor-arg>
+    </bean>
+    <!-- On pre-handle, manage the user's site preference (declare after DeviceResolverHandlerInterceptor) -->
+    <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
+    <!-- On pre-handle, redirects mobile users to "myapp.com/m" (declare after DeviceResolverHandlerInterceptor) -->
+    <bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" factory-method="urlPath">
+      <constructor-arg index="0" type="java.lang.String" value="/mobile" />
+      <constructor-arg index="1" type="java.lang.String" value="/smdm-war" />
+    </bean>
+    <ref bean="localeChangeInterceptor"/>
+  </mvc:interceptors>
+  
+  <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+    <property name="paramName" value="locale" />
+  </bean>
+
+  <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+    <property name="defaultLocale" value="en" />
+  </bean>
+</beans>
